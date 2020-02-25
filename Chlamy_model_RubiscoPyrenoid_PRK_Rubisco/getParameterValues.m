@@ -223,7 +223,7 @@ for SAMPLE = idx
             K(samplesMinFlux(:,SAMPLE)>=1e-22,end+1)=kinetic_param;
             samplesMinFlux(samplesMinFlux(:,SAMPLE)<1e-22,SAMPLE) = 0;
             V(:,end+1)=samplesMinFlux(:,SAMPLE);
-            [mi,ma] = MyCobraFVA(Model2);
+            [mi,ma] = fluxVariability(Model2);
             miC(:,end+1) = exp(mi);
             maC(:,end+1) = exp(ma);
             
